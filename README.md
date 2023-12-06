@@ -1,9 +1,8 @@
 # Painting Database Admin Dashboard
 This is my first full-stack Non-Tutorial Projects. 
 
-Aims to Train my DB Architecture. Design the schema, relations, and validations in both Server and Client  
-First Time Developing API from scratch
-First Time connecting API Server to FrontEnd 
+Aims to Train my DB Architecture. Design the schema, relations, and validations in both Server and Client 
+First Time Developing API from scratch and connect it to the client-side 
 
 Client Side Repo - [Repository](https://github.com/ToHe-MT/PaintingClient)
 
