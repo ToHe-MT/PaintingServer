@@ -1,4 +1,7 @@
 # Painting Database Admin Dashboard
+
+Websites that have CRUD Applications and  that is designed to hold a paintings data. 
+
 This is my first full-stack Non-Tutorial Projects. 
 
 Aims to Train my DB Architecture. Design the schema, relations, and validations in both Server and Client 
