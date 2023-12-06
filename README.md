@@ -12,7 +12,7 @@ This repository contains an Express.js application.
 
 ### Installation
 
-1. Clone the repository: `git clone https://github.com/ToHe-MT/PaintingServer`
+1. Clone the repository: `git clone https://github.com/ToHe-MT/PaintingServer.git`
 
 
 2. Install dependencies: `npm install`
