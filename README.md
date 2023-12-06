@@ -5,7 +5,7 @@ Aims to Train my DB Architecture. Design the schema, relations, and validations 
 First Time Developing API from scratch
 First Time connecting API Server to FrontEnd 
 
-The Client Side Git are in `https://github.com/ToHe-MT/PaintingClient`
+Client Side Repo - `https://github.com/ToHe-MT/PaintingClient`
 
 ## Express App Setup
 
