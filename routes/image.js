@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-// const { GridFsStorage } = require('multer-gridfs-storage');
+const { GridFsStorage } = require('multer-gridfs-storage');
 const router = require('express').Router();
 const multer = require('multer');
 const crypto = require('crypto');
