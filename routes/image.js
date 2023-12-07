@@ -20,7 +20,7 @@ conn.once('open', () => {
 });
 
 const storage = new GridFsStorage({
-    url: mongoURI,
+    url: process.env.MONGODB_URI,
     options: { useUnifiedTopology: true },
     file: (req, file) => {
         // this function runs every time a new file is created
