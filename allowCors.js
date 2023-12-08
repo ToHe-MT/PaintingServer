@@ -10,7 +10,12 @@ const allowCors = (req, res, next) => {
         res.status(200).end();
         return;
     }
-    next(); // Move to the next middleware/route handler
+    if (next && typeof next === 'function') {
+        next(); // Move to the next middleware/route handler
+    } else {
+        // If next is not available, proceed to send the response
+        res.end('Allow CORS'); // Or handle the response accordingly
+    }
 };
 
 module.exports = allowCors;
