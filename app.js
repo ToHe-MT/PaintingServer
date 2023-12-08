@@ -16,7 +16,7 @@ main().catch((err) => console.log(err));
 
 async function main() {
   await mongoose.connect(process.env.MONGODB_URI);
-  console.log('connected to database')
+  console.log('CONNECTED')
 }
 
 //ROUTER
