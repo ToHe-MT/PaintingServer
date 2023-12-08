@@ -9,15 +9,6 @@ var logger = require('morgan');
 
 const allowCors = require("./allowCors");
 
-// Define your route handler
-const handler = (req, res) => {
-  const d = new Date();
-  res.end(d.toString());
-};
-
-// Activate allowCors middleware for your handler
-const corsHandler = allowCors(handler);
-
 // Set up mongoose connection
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
@@ -41,13 +32,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 
-// app.use(cors());
+app.use(allowCors())
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(allowCors)
 
 app.use('/', indexRouter)
 app.use('/', catalogRouter);
