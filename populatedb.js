@@ -91,7 +91,7 @@ async function createPainting(){
 async function createBuyer(){
     console.log("Adding Buyer");
     await Promise.all([
-        buyerCreate(0,"John", "United States", "Boston","Orchard Street", '13213',"john@gmail.com", "081244443333"),
-        buyerCreate(1,"Casey", "United States", "Las Vegas","Mongan Street", '14036',"Casey@gmail.com", "081122223333")
+        buyerCreate(0,"John", "United States", "Boston","Orchard Street", '13213',"john@gmail.com", "+6281244443333"),
+        buyerCreate(1,"Casey", "United States", "Las Vegas","Mongan Street", '14036',"Casey@gmail.com", "+6281122223333")
     ])   
 }
