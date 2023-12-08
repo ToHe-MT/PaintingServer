@@ -5,7 +5,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var cors = require("cors");
+// Import the allowCors middleware
+
+const allowCors = require("./allowCors");
+
+// Define your route handler
+const handler = (req, res) => {
+  const d = new Date();
+  res.end(d.toString());
+};
+
+// Activate allowCors middleware for your handler
+const corsHandler = allowCors(handler);
 
 // Set up mongoose connection
 const mongoose = require("mongoose");
@@ -29,13 +40,14 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(cors());
+
+// app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(allowCors)
 
 app.use('/', indexRouter)
 app.use('/', catalogRouter);
