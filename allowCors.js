@@ -16,8 +16,9 @@ const allowCors = fn => async (req, res) => {
 }
 
 const handler = (req, res) => {
-    const d = new Date()
-    res.end(d.toString())
+    next();
+    // const d = new Date()
+    // res.end(d.toString())
 }
 
 module.exports = allowCors(handler)
